@@ -1,9 +1,11 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace BulkyBookWeb.Migrations
+#nullable disable
+
+namespace BulkyBook.DataAccess.Migrations
 {
-    public partial class AddCategoryToDatabase : Migration
+    public partial class AddCategory : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
