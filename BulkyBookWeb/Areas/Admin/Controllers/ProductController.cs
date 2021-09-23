@@ -43,6 +43,7 @@ public class ProductController : Controller
         if (id==null || id == 0)
         {
             //create product
+            ViewBag.CategoryList = CategoryList;
             return View(product);
         }
         else
