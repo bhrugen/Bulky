@@ -2,6 +2,7 @@
 using BulkyBook.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace BulkyBookWeb.Controllers;
 public class CategoryController : Controller
@@ -51,16 +52,16 @@ public class CategoryController : Controller
         {
             return NotFound();
         }
-        var categoryFromDb = _db.Categories.Find(id);
-        //var categoryFromDbFirst = _db.Categories.FirstOrDefault(u=>u.Id==id);
+        //var categoryFromDb = _db.Categories.Find(id);
+        var categoryFromDbFirst = _db.Categories.FirstOrDefault(u=>u.Name=="id");
         //var categoryFromDbSingle = _db.Categories.SingleOrDefault(u => u.Id == id);
 
-        if (categoryFromDb == null)
+        if (categoryFromDbFirst == null)
         {
             return NotFound();
         }
 
-        return View(categoryFromDb);
+        return View(categoryFromDbFirst);
     }
 
     //POST
