@@ -64,6 +64,12 @@
                 </select>
                 
             </div>
+            <div class="form-floating py-2 col-6">
+                <select asp-for="Input.CompanyId" asp-items="@Model.Input.CompanyList" class=form-select>
+                    <option disabled selected>-Select Company-</option>
+                </select>
+                
+            </div>
             <button id="registerSubmit" type="submit" class="w-100 btn btn-primary">Register</button>
         </form>
     </div>
