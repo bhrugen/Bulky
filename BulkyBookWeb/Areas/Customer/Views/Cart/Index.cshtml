@@ -1,4 +1,5 @@
-﻿
+﻿@model BulkyBook.Models.ViewModels.ShoppingCartVM
+
 <form method="post">
 	<br />
 	<div class="container">
@@ -10,23 +11,25 @@
 						Shopping Cart
 					</div>
 					<div class="col-6 text-end">
-						<a class="btn btn-outline-info btn-sm">Continue Shopping</a>
+						<a asp-area="Customer" asp-controller="Home" asp-action="Index" class="btn btn-outline-info btn-sm">Continue Shopping</a>
 					</div>
 				</div>
 			</div>
 
 			<div class="card-body">
+				@foreach(var item in Model.ListCart){
 				<div class="row">
 					<div class="d-none d-lg-block col-lg-1 text-center py-2">
-						<img src="img" class="rounded" width="100%" />
+						<img src="@item.Product.ImageUrl" class="rounded" width="100%" />
 					</div>
 					<div class="col-12 col-lg-6 pt-md-3">
-						<h5><strong>Title</strong></h5>
-						<p><small>Description</small></p>
+						<h5><strong>@item.Product.Title</strong></h5>
+						<p><small>@Html.Raw(item.Product.Description)</small></p>
 					</div>
 					<div class="col-12  col-lg-5 text-center row">
 						<div class="col-4 text-md-right pt-4">
-							<h6><strong>$Price<span class="text-muted">x</span> Count </strong></h6>
+							<h6><strong>@item.Price.ToString("c")
+								<span class="text-muted">&nbsp;x&nbsp;</span>@item.Count </strong></h6>
 						</div>
 						<div class="col-6 col-sm-4 col-lg-6 pt-2">
 							<div class="w-75 btn-group" role="group">
@@ -47,7 +50,7 @@
 					</div>
 				</div>
 				<hr />
-
+				}
 				<div class="row">
 					<div class="col-12 col-md-6 offset-md-6 col-lg-4 offset-lg-8 pr-4">
 						<ul class="list-group">
