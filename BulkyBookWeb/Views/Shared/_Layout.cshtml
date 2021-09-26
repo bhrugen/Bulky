@@ -1,79 +1,79 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - BulkyBookWeb</title>
-    <link rel="stylesheet" href="~/css/bootswatchTheme.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="//cdn.datatables.net/1.11.2/css/jquery.dataTables.min.css" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"] - BulkyBookWeb</title>
+	<link rel="stylesheet" href="~/css/bootswatchTheme.css" />
+	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="//cdn.datatables.net/1.11.2/css/jquery.dataTables.min.css" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">Navbar</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarColor02">
+					<ul class="navbar-nav me-auto">
+						<li class="nav-item">
 
-    <div class="collapse navbar-collapse" id="navbarColor02">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item">
-          
-           <a class="nav-link " asp-area="Customer"  asp-controller="Home" asp-action="Index">Home</a>
-          
-        
-       
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Content Managment</a>
-          <div class="dropdown-menu">
-               <a class="dropdown-item" asp-area="Admin" asp-controller="Category" asp-action="Index">Category</a>
-          <a class="dropdown-item" asp-area="Admin" asp-controller="CoverType" asp-action="Index">Cover Type</a>
-       <a class="dropdown-item" asp-area="Admin" asp-controller="Product" asp-action="Index">Product</a>
-       
-            <div class="dropdown-divider"></div>
-        <a class="dropdown-item" asp-area="Admin" asp-controller="Company" asp-action="Index">Company</a>
-      
-          </div>
-        </li>
-        <li class="nav-item">
-            <a class=nav-link asp-area="Customer" asp-controller="Cart" asp-action="Index">
-                <i class="bi bi-cart"></i>
-            </a>
-        </li>
-      </ul>
-      <partial name="_LoginPartial" />
-     @* <form class="d-flex">
-        <input class="form-control me-sm-2" type="text" placeholder="Search">
-        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-      </form>*@
-    </div>
-  </div>
-</nav>
-        
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            <partial name="_Notification" />
-            @RenderBody()
-        </main>
-    </div>
+							<a class="nav-link " asp-area="Customer" asp-controller="Home" asp-action="Index">Home</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Content Managment</a>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" asp-area="Admin" asp-controller="Category" asp-action="Index">Category</a>
+								<a class="dropdown-item" asp-area="Admin" asp-controller="CoverType" asp-action="Index">Cover Type</a>
+								<a class="dropdown-item" asp-area="Admin" asp-controller="Product" asp-action="Index">Product</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" asp-area="Admin" asp-controller="Company" asp-action="Index">Company</a>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a class=nav-link asp-area="Admin" asp-controller="Order" asp-action="Index">
+								Manage Order
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class=nav-link asp-area="Customer" asp-controller="Cart" asp-action="Index">
+								<i class="bi bi-cart"></i>
+							</a>
+						</li>
+					</ul>
+					<partial name="_LoginPartial" />
+					@* <form class="d-flex">
+						<input class="form-control me-sm-2" type="text" placeholder="Search">
+						<button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+						</form>*@
+				</div>
+			</div>
+		</nav>
 
-    <footer class="footer text-muted bg-primary">
-        <div class="container">
-            &copy; 2021 - BulkyBookWeb 
-        </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="//cdn.datatables.net/1.11.2/js/jquery.dataTables.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-      <script src="https://cdn.tiny.cloud/1/n94ifuzvl80pchikopiwgz2esrw8n28dwcywvpejlqrregfp/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+	</header>
+	<div class="container">
+		<main role="main" class="pb-3">
+			<partial name="_Notification" />
+			@RenderBody()
+		</main>
+	</div>
+
+	<footer class="footer text-muted bg-primary">
+		<div class="container">
+			&copy; 2021 - BulkyBookWeb
+		</div>
+	</footer>
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<script src="~/js/site.js" asp-append-version="true"></script>
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script src="//cdn.datatables.net/1.11.2/js/jquery.dataTables.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+	<script src="https://cdn.tiny.cloud/1/n94ifuzvl80pchikopiwgz2esrw8n28dwcywvpejlqrregfp/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+	@await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
