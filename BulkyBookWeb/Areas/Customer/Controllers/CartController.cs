@@ -150,7 +150,8 @@ namespace BulkyBookWeb.Areas.Customer.Controllers
 
             var service = new SessionService();
             Session session = service.Create(options);
-
+            _unitOfWork.OrderHeader.UpdateStripePaymentID(ShoppingCartVM.OrderHeader.Id,session.Id,session.PaymentIntentId);
+            _unitOfWork.Save();
             Response.Headers.Add("Location", session.Url);
             return new StatusCodeResult(303);
 
@@ -158,6 +159,13 @@ namespace BulkyBookWeb.Areas.Customer.Controllers
             //_unitOfWork.ShoppingCart.RemoveRange(ShoppingCartVM.ListCart);
             //_unitOfWork.Save();
             //return RedirectToAction("Index","Home");
+        }
+
+        public IActionResult OrderConfirmation(int id)
+        {
+            OrderHeader orderHeader = _unitOfWork.OrderHeader.GetFirstOrDefault(u => u.Id == id);
+
+            //check the stripe status
         }
 
         public IActionResult Plus(int cartId)
