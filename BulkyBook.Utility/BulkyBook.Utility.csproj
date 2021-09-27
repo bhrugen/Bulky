@@ -10,6 +10,7 @@
     <PackageReference Include="MailKit" Version="2.15.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.0-rc.1.21452.15" />
     <PackageReference Include="MimeKit" Version="2.15.1" />
+    <PackageReference Include="SendGrid" Version="9.24.3" />
   </ItemGroup>
 
 </Project>
