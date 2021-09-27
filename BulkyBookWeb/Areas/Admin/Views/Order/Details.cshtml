@@ -248,10 +248,10 @@
 								{
 									<input type="submit" class="btn btn-success form-control my-1" value="Pay Now" />
 								}
-								@if (Model.OrderHeader.OrderStatus != SD.StatusRefunded ||
+								@if (Model.OrderHeader.OrderStatus != SD.StatusRefunded &&
 										Model.OrderHeader.OrderStatus != SD.StatusCancelled)
 								{
-									<input type="submit" class="btn btn-danger form-control my-1" value="Cancel Order" />
+									<input type="submit" asp-action="CancelOrder" class="btn btn-danger form-control my-1" value="Cancel Order" />
 								}
 							}
 						</div>
