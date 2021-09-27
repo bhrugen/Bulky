@@ -6,12 +6,14 @@
 	<br />
 	<div class="container">
 		<div class="card">
-			<div class="card-header bg-dark text-light ml-0 row container">
+			<div class="card-header bg-dark text-light ml-0">
+				<div class="container row">
 				<div class="col-12 d-none d-md-block col-md-6 pb-1">
 					<i class="fas fa-shopping-cart"></i> &nbsp; Order Summary
 				</div>
 				<div class="col-12 col-md-4 offset-md-2 text-right">
 					<a asp-action="Index" class="btn btn-outline-info form-control btn-sm">Back to Orders</a>
+				</div>
 				</div>
 			</div>
 			<div class="card-body">
@@ -249,7 +251,8 @@
 									<input type="submit" class="btn btn-success form-control my-1" value="Pay Now" />
 								}
 								@if (Model.OrderHeader.OrderStatus != SD.StatusRefunded &&
-										Model.OrderHeader.OrderStatus != SD.StatusCancelled)
+										Model.OrderHeader.OrderStatus != SD.StatusCancelled &&
+								Model.OrderHeader.OrderStatus!=SD.StatusShipped)
 								{
 									<input type="submit" asp-action="CancelOrder" class="btn btn-danger form-control my-1" value="Cancel Order" />
 								}
