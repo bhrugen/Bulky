@@ -1,7 +1,7 @@
-﻿
+﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace BulkyBookWeb.Models;
+namespace BulkyBookWeb.Models { 
 public class Category
 {
     [Key]
@@ -10,4 +10,5 @@ public class Category
     public string Name { get; set; }
     public int DisplayOrder { get; set; }
     public DateTime CreatedDateTime { get; set; } = DateTime.Now;
+}
 }
