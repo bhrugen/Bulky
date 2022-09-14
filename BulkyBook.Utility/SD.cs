@@ -8,10 +8,11 @@ namespace BulkyBook.Utility
 {
     public static class SD
     {
-        public const string Role_User_Indi = "Individual";
-        public const string Role_User_Comp = "Company";
-        public const string Role_Admin = "Admin";
-        public const string Role_Employee = "Employee";
+        public const string Role_Student = "Student";
+        public const string Role_Teacher = "Teacher";
+        public const string Role_HOD = "HOD";
+        public const string Role_SubjectCoord = "SUbjectCoord";
+        public const string Role_Parent = "Parent";
 
         public const string StatusPending = "Pending";
         public const string StatusApproved = "Approved";

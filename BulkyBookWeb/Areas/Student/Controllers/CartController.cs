@@ -13,7 +13,7 @@ using System.Security.Claims;
 
 namespace BulkyBookWeb.Areas.Customer.Controllers
 {
-    [Area("Customer")]
+    [Area("Student")]
     [Authorize]
     public class CartController : Controller
     {

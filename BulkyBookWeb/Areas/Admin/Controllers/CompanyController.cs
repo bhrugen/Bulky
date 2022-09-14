@@ -15,7 +15,7 @@ using System.Linq;
 
 namespace BulkyBookWeb.Controllers;
 [Area("Admin")]
-[Authorize(Roles = SD.Role_Admin)]
+[Authorize(Roles = SD.Role_HOD)]
 public class CompanyController : Controller
 {
     private readonly IUnitOfWork _unitOfWork;

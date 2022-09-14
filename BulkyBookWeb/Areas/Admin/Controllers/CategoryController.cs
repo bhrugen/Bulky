@@ -9,7 +9,7 @@ using System.Linq;
 
 namespace BulkyBookWeb.Controllers;
 [Area("Admin")]
-[Authorize(Roles = SD.Role_Admin)]
+[Authorize(Roles = SD.Role_HOD)]
 public class CategoryController : Controller
 {
     private readonly IUnitOfWork _unitOfWork;
