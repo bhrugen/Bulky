@@ -11,9 +11,9 @@ namespace BulkyBook.Models
 {
     public class OrderDetail
     {
-        public int Id {  get; set; }
+        public int Id { get; set; }
         [Required]
-        public int OrderId {  get; set; }
+        public int OrderId { get; set; }
         [ForeignKey("OrderId")]
         [ValidateNever]
         public OrderHeader OrderHeader { get; set; }
@@ -24,6 +24,7 @@ namespace BulkyBook.Models
         [ValidateNever]
         public Product Product { get; set; }
         public int Count { get; set; }
-        public double Price { get; set; }
+        [Column(TypeName = "decimal(18,2)")]
+        public decimal Price { get; set; }
     }
 }
