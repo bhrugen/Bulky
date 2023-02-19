@@ -22,21 +22,25 @@ namespace BulkyBook.Models
         [Required]
         [Range(1, 10000)]
         [Display(Name = "List Price")]
-        public double ListPrice { get; set; }
+        [Column(TypeName = "decimal(18,2)")]
+        public decimal ListPrice { get; set; }
         [Required]
         [Range(1, 10000)]
         [Display(Name = "Price for 1-50")]
-        public double Price { get; set; }
+        [Column(TypeName = "decimal(18,2)")]
+        public decimal Price { get; set; }
 
         [Required]
         [Range(1, 10000)]
         [Display(Name = "Price for 51-100")]
-        public double Price50 { get; set; }
+        [Column(TypeName = "decimal(18,2)")]
+        public decimal Price50 { get; set; }
 
         [Required]
         [Display(Name = "Price for 100+")]
         [Range(1, 10000)]
-        public double Price100 { get; set; }
+        [Column(TypeName = "decimal(18,2)")]
+        public decimal Price100 { get; set; }
         [ValidateNever]
         public string ImageUrl { get; set; }
 

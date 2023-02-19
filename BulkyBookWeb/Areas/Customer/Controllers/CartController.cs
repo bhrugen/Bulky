@@ -243,7 +243,7 @@ namespace BulkyBookWeb.Areas.Customer.Controllers
 
 
 
-        private double GetPriceBasedOnQuantity(double quantity, double price, double price50, double price100)
+        private decimal GetPriceBasedOnQuantity(double quantity, decimal price, decimal price50, decimal price100)
         {
             if (quantity <= 50)
             {
