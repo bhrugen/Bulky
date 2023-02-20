@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31612.314
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BulkyBookWeb", "BulkyBookWeb\BulkyBookWeb.csproj", "{D9C13C5C-E0A2-4097-959D-D192AD462570}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThriftshopcloneWeb", "BulkyBookWeb\ThriftshopcloneWeb.csproj", "{D9C13C5C-E0A2-4097-959D-D192AD462570}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BulkyBook.DataAccess", "BulkyBook.DataAccess\BulkyBook.DataAccess.csproj", "{7FEC7353-5FF4-417B-8CC2-54B0AB6DFF85}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thriftshopclone.DataAccess", "BulkyBook.DataAccess\Thriftshopclone.DataAccess.csproj", "{7FEC7353-5FF4-417B-8CC2-54B0AB6DFF85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BulkyBook.Models", "BulkyBook.Models\BulkyBook.Models.csproj", "{870A5AA3-0F5F-4463-B3C4-E472EAA656D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thriftshopclone.Models", "BulkyBook.Models\Thriftshopclone.Models.csproj", "{870A5AA3-0F5F-4463-B3C4-E472EAA656D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BulkyBook.Utility", "BulkyBook.Utility\BulkyBook.Utility.csproj", "{9E4BF9C9-7D38-4AB1-AACB-59F2BD2F16D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thriftshopclone.Utility", "BulkyBook.Utility\Thriftshopclone.Utility.csproj", "{9E4BF9C9-7D38-4AB1-AACB-59F2BD2F16D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
